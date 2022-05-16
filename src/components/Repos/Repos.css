@@ -1,0 +1,26 @@
+.repos {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items : flex-start;
+    margin-left: 50px;
+  }
+  .repo {
+    margin-block: 12px;
+    background-color: white;
+    width: 100%;
+    max-width: 877px;
+    max-height: 112px;
+    border-radius: 6px;
+  }
+  
+  .repo a {    
+    text-decoration: none;
+  }
+  
+  .repo--count {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+  }

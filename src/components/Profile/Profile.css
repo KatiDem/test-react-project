@@ -1,0 +1,41 @@
+.profile {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    max-width: 430px;
+    align-items:flex-start;
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+  .profile a {
+    text-decoration: none;
+  }
+  
+  .profile--image {
+    max-width: 280px;
+    max-height: 280px;
+    border-radius: 50%;
+  }
+  
+  .profile--name {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+  }
+  
+  .profile--username {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;  
+    color: #0064EB;
+  }
+  
+  .profile--info {
+    display: flex; 
+    align-items: center;
+  }
+  
+  .profile--icon {
+    max-width: 24px;
+    max-height: 24px;
+  }

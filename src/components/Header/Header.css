@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color:#0064EB;
+  }
+  
+  .header--image {
+    width: 41.02px;
+    height: 40px;
+    padding: 16px 20px 16px 40px;
+  }
+  
+  .header--search {
+    background: #FFFFFF;
+    border-radius: 6px;
+    max-width: 500px;
+    height: 40px;
+    padding-right: 40px;
+    background-image: url('/src/images/search1.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    text-indent: 30px;
+  
+  }
+  
+  .header--searchimg {
+    width: 14px;
+    height: 14px;
+  }
