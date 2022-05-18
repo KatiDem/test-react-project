@@ -1,7 +1,7 @@
 # Netlify deployed
 
-  [http://cozy-mandazi-6f917e.netlify.app](Click to open project)
-  
+  [Click to open project](https://cozy-mandazi-6f917e.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
