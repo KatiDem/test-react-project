@@ -4,7 +4,6 @@ import "./Repos.css"
 // пагинация
 // размер блоков репозитория
 // дизайн
-// заменить пропс на юсКонтекст
 
 export default function Repos() {
 
