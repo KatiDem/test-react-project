@@ -1,12 +1,6 @@
-.App {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  background-color: #E5E5E5;
-  font-family: 'Inter', sans-serif;
-}
-
 .main {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }

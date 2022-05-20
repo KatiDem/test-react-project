@@ -1,4 +1,4 @@
-# Netlify deployed
+# Netlify deploy
 
   [Click to open project](https://cozy-mandazi-6f917e.netlify.app/)
 
