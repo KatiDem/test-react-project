@@ -21,10 +21,14 @@ export default function Profile() {
             <h2 className="profile--name">{user.name}</h2>
             <a href={user.html_url} target="_blank"  rel="noreferrer"> <p className="profile--username">{user.login}</p> </a>
             <div className="profile--info">
+              <div className="profile--follow">
                 <img className="profile--icon" src={followers} alt=""/>
                 <p> {rounding(user.followers)} followers</p>
+                </div>
+              <div className="profile--follow">    
                 <img  className="profile--icon"  src={following} alt=""/>
                 <p> {rounding(user.following)} following</p>
+              </div>
             </div>
         </div>
     )
