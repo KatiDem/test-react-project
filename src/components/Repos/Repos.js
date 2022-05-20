@@ -11,7 +11,7 @@ export default function Repos() {
 
     const repoElement = repos.map(elem => {
         return (<div className="repo" key={elem.id}>
-                    <a href={elem.html_url}  target="_blank"  rel="noreferrer"> <h2 className="repo--elem">{elem.name}</h2></a>
+                    <a href={elem.html_url}  target="_blank"  rel="noreferrer"> <h2 className="repo--name">{elem.name}</h2></a>
                     <p className="repo--description">{elem.description}</p>
                 </div>)
       })
