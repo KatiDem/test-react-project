@@ -1,5 +1,5 @@
 import * as axios from "axios";
-import React from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Context } from "./context/context";
 import './App.css';
 import Header from "./components/Header/Header"
@@ -11,11 +11,13 @@ import EmptyRepos from "./components/EmptyRepos/EmptyRepos";
 import NotFound from "./components/NotFound/NotFound";
 
 export default function App() {
-  const [username, setUsername] = React.useState("")
-  const [loading, setLoading] = React.useState(false)
-  const [user, setUser] = React.useState([])
-  const [repos, setRepos] = React.useState([])
-  const [emptyUser, setEmptyUser] = React.useState(false)
+  const [username, setUsername] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [user, setUser] = useState([])
+  const [repos, setRepos] = useState([])
+  const [emptyUser, setEmptyUser] = useState(false)
+  const [page, setPage] = useState(1)
+  const isMounted = useRef(false)
 
   function handleSetUsername(e) {
     setUsername(e.target.value)
@@ -25,6 +27,7 @@ export default function App() {
     event.preventDefault()
     try {
       setLoading(true)
+      setPage(1)
       const {data: user} = await axios.get(
         `https://api.github.com/users/${username}`
       )
@@ -44,9 +47,19 @@ export default function App() {
     }
 }
 
+  useEffect(() => {
+  if(isMounted.current){
+    axios.get(`https://api.github.com/users/${username}/repos?page=${page}&per_page=4`)
+    .then((response) => {setLoading(false); setRepos(response.data);})
+  } else {
+   isMounted.current = true;
+  }
+  
+}, [page]);
+
   return (
     <Context.Provider
-      value={{ handleSubmit, handleSetUsername, username, user, setUser, repos, setRepos, loading, setLoading }}
+      value={{ page, setPage, handleSubmit, handleSetUsername, username, user, setUser, repos, setRepos, loading, setLoading }}
     >
       <Header />
       { user.length === 0 ? <StartPage/>  :  

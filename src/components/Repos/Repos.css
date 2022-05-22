@@ -41,3 +41,66 @@
   margin-left: 32px;
   margin-bottom: 24px;
 }
+
+.paginate {
+  display: flex;
+  justify-content :flex-end;
+  max-width: 877px;
+  width: 100%;
+}
+
+.paginate--text {
+  color: gray;
+}
+
+.pagination {
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+align-items: center;
+list-style: none;
+color: #808080;
+}
+
+.pagination li {
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.pagination a {
+  cursor: pointer;
+}
+
+.pagination__link--active {
+  background: blue;
+  color: #fff;
+}
+
+
+.previous {
+margin-right: 26px;
+}
+
+.next {
+margin-left: 26px;
+}
+
+.bottom {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+
+}
+
+.bottom  div {
+  color: #808080;
+}
+
+@media (max-width: 1000px) {
+.bottom {
+  justify-content: center;
+}
+}
