@@ -1,0 +1,106 @@
+.repos {
+  color: black;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items : flex-start;
+  margin-left: 50px;
+}
+
+.repo {
+  margin-block: 12px;
+  text-align: start;
+  background-color: white;
+  width: 100%;
+  max-width: 877px;
+  height: 112px;
+  border-radius: 6px;
+}
+
+.repo a {    
+  text-decoration: none;
+}
+
+.repo--count {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  margin-top: 29px;
+  margin-bottom: 16px;
+}
+
+.repo--name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0064EB;
+  margin: 24px 32px 16px;
+}
+
+.repo--description {
+  margin-left: 32px;
+  margin-bottom: 24px;
+}
+
+.paginate {
+  display: flex;
+  justify-content :flex-end;
+  max-width: 877px;
+  width: 100%;
+}
+
+.paginate--text {
+  color: gray;
+}
+
+.pagination {
+display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+align-items: center;
+list-style: none;
+color: #808080;
+}
+
+.pagination li {
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.pagination a {
+  cursor: pointer;
+}
+
+.pagination__link--active {
+  background: blue;
+  color: #fff;
+}
+
+
+.previous {
+margin-right: 26px;
+}
+
+.next {
+margin-left: 26px;
+}
+
+.bottom {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+
+}
+
+.bottom  div {
+  color: #808080;
+}
+
+@media (max-width: 1000px) {
+.bottom {
+  justify-content: center;
+}
+}

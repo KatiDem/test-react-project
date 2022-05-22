@@ -1,0 +1,51 @@
+.profile {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-top: 40px;
+    padding-left: 57px;
+  }
+  .profile a {
+    text-decoration: none;
+  }
+
+  .profile--image {
+    max-width: 280px;
+    max-height: 280px;
+    border-radius: 50%;
+  }
+  
+  .profile--name {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 130%;
+    margin-top: 29px;
+    margin-bottom: 12px;
+  }
+  
+  .profile--username {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;  
+    color: #0064EB;
+    margin: 0px;
+  }
+  
+  .profile--info {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .profile--follow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .profile--icon {
+    max-width: 24px;
+    max-height: 24px;
+  }
