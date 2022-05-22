@@ -48,18 +48,21 @@ export default function App() {
 }
 
   useEffect(() => {
-  if(isMounted.current){
-    axios.get(`https://api.github.com/users/${username}/repos?page=${page}&per_page=4`)
-    .then((response) => {setLoading(false); setRepos(response.data);})
-  } else {
-   isMounted.current = true;
-  }
-  
-}, [page]);
+    if (isMounted.current) {
+      axios.get(`https://api.github.com/users/${username}/repos?page=${page}&per_page=4`)
+        .then((response) => {
+          setLoading(false);
+          setRepos(response.data);
+        })
+    } else {
+      isMounted.current = true;
+    }
+
+  }, [page]);
 
   return (
     <Context.Provider
-      value={{ page, setPage, handleSubmit, handleSetUsername, username, user, setUser, repos, setRepos, loading, setLoading }}
+      value={{ page, setPage, handleSubmit, handleSetUsername, username, user, setUser, repos, setRepos }}
     >
       <Header />
       { user.length === 0 ? <StartPage/>  :  
@@ -69,7 +72,7 @@ export default function App() {
               <Profile />
               {repos.length !== 0 ? <Repos /> : <EmptyRepos />}
             </div> 
-            )
+          )
         )
       }
    </Context.Provider>
