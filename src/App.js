@@ -65,7 +65,7 @@ export default function App() {
       value={{ page, setPage, handleSubmit, handleSetUsername, username, user, setUser, repos, setRepos }}
     >
       <Header />
-      { user.length === 0 ? <StartPage/>  :  
+      { user.length === 0 && !emptyUser ? <StartPage/>  :  
         ( loading ? <Loader/> :
           (emptyUser ? <NotFound /> : 
             <div className="main">
